@@ -13,7 +13,7 @@ const App = () => {
         type="text"
         value={name}
         onChange={handleChange}
-        placeholder="Enter your name"
+        placeholder="Enter your name" 
       />
 
       {name !== "" && <p>Hello, {name}!</p>}
