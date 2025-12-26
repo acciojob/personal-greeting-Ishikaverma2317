@@ -1,24 +1,20 @@
 import React, { useState } from "react";
 
-const App = () => {
+function App() {
   const [name, setName] = useState("");
-
-  const handleChange = (e) => {
-    setName(e.target.value);
-  };
 
   return (
     <div>
       <input
         type="text"
+        placeholder="Enter your name"
         value={name}
-        onChange={handleChange}
-        placeholder="Enter your name" 
+        onChange={(e) => setName(e.target.value)}
       />
 
-      {name !== "" && <p>Hello, {name}!</p>}
+      {name && <h2>Hello, {name}!</h2>}
     </div>
   );
-};
+}
 
 export default App;
